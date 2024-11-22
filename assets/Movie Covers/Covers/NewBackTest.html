@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('the-girl-next-door.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: moveBackground 20s infinite alternate linear;
+        }
+        
+        .black-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.5;
+        }
+        
+        @keyframes moveBackground {
+            0% {
+                background-position-y: 0;
+            }
+            100% {
+                background-position-y: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="black-layer"></div>
+</body>
+</html>
