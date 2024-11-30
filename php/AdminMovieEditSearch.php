@@ -16,7 +16,6 @@ if ($result->num_rows > 0) {
 $conn->close();
 function createTable($movies)
 {
-    
     $html = '<thead class="gradient-custom"><tr><th>ID</th><th data-priority="1">Name</th><th data-priority="2">Genre</th><th data-priority="3">Year</th><th data-priority="4"></th></tr></thead><tbody>';
     foreach ($movies as $movie) {
         $html .= "<tr><td>" . $movie['movie_id'] . "</td><td>" . $movie['name'] . "</td><td>" . $movie['year'] . "</td><td>" . $movie['genre'] . "</td><td>" . '<button type="submit" class="btn btn-primary ms-md-2" value="'. $movie['movie_id'] .'" onsubmit="LoadToForm()"  onclick="LoadToForm()"  data-bss-hover-animate="pulse"  id="loadBtn" style="padding:1px;width:78px;height:30px;text-align:center;">Load</button></td></tr>';
