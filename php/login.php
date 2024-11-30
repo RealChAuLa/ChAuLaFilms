@@ -1,16 +1,12 @@
 <?php
-
 include "config.php" ;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
-
-    $sql = "select * from logintbl where email = '$email' and password = '$password'";  
-
+    $sql = "select * from logintbl where email = '$email' and password = '$password'";
     $result = mysqli_query($conn, $sql);  
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    $count = mysqli_num_rows($result);  
-        
+    $count = mysqli_num_rows($result);
     if($count == 1){ 
         session_start();
         $_SESSION["loggedin"] = true ; 
@@ -31,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             var count = 5;
             document.write("Username or password incorrect. Redirecting in ");
             var redirectTimer = setInterval(function() {
-                
                 if (count > 0) {
                     document.open();
                     document.write("Username or password incorrect. Redirecting in " + count + " seconds");
@@ -44,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </script>';
         }  
         $conn->close();
-
 }
 
 
