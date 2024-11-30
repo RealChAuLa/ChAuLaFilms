@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'config.php';
-
 $Mid = isset($_GET["Mid"]) ? $_GET["Mid"] : null;
 if ($Mid === null) {
     echo 'No Movie Selected To be Removed from Favorites';
