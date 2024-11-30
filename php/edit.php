@@ -3,20 +3,10 @@ $movieId = $_GET['Mid'];
 if ($movieId) {
   include "config.php";
   $sql = "SELECT * FROM movietbl WHERE movie_id = ?";
-
-  // Prepare a statement using PDO
   $stmt = $conn->prepare($sql);
-
-  // Bind the movie ID parameter to the statement
   $stmt->bind_param("i", $movieId);
-
-  // Execute the statement
   $stmt->execute();
-
-  // Fetch the result
   $result = $stmt->get_result();
-
-  // Check if there is a movie record with the provided ID
   if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
     echo '<div class="formbold-main-wrapper">
@@ -27,14 +17,12 @@ if ($movieId) {
                                         <label for="EmovieName" class="formbold-form-label">Name</label>
                                         <input type="text" name="EmovieName" id="EmovieName" placeholder="Movie Name" value = "' . $row["name"] . '" class="formbold-form-input" />
                                     </div>
-
                                     <div>
                                         <label for="EmovieYear" class="formbold-form-label">Year</label>
                                         <input type="text" name="EmovieYear" id="EmovieYear" placeholder="Released Year" value = "' . $row["year"] . '" class="formbold-form-input" />
                                     </div>
                                     <div>
                                         <label class="formbold-form-label">Genre</label>
-
                                         <select class="formbold-form-input" name="EmovieGenre" id="EmovieGenre">
                                             <option value = "' . $row["genre"] . '">' . $row["genre"] . '</option>
                                             <option value="Action">Action</option>
@@ -64,7 +52,6 @@ if ($movieId) {
                                             <option value="War">War</option>
                                             <option value="Western">Western</option>
                                         </select>
-
                                     </div>
                                     <div class="formbold-mb-3">
                                         <label for="EmovieLink" class="formbold-form-label">Download Link</label>
@@ -94,7 +81,6 @@ if ($movieId) {
                                 </div>
                                 <button class="formbold-btn" id="editBtn" type="submit" style="background-color:blue;">Edit</button>
                             </form>
-
                         </div>
                     </div>';
   } else {
