@@ -1,0 +1,53 @@
+/* Login Form */
+
+.not.not-blured {
+  filter: blur(5px) brightness(.7);
+  transition: all 0.7s;
+  
+}
+
+.popup-container {
+  position: fixed;
+  width: 900px;
+  right: auto;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: all 0.7s;
+}
+
+.active.popup-container {
+  visibility: hidden;
+  opacity: 0;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+  transition: all 0.7s;
+}
+
+.popup-btn {
+  background-color: orangered;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid;
+}
+
+.loginClose-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.loginClose-icon:hover {
+  color: orangered;
+}
+
+
+
+
