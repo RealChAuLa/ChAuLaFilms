@@ -1,0 +1,184 @@
+
+
+
+
+
+
+
+/* Search Bar */
+
+
+
+
+
+#searchDiv {
+  
+  background-color: rgb(33, 37, 41);
+  margin: 15px auto;
+  border-radius: 22px;
+  width: 322.1px;
+  transition: all 0.7s;
+  visibility: visible;  
+}
+
+#NosearchDiv {
+  
+  filter: blur(5px) brightness(.7);
+  transition: all 1s;
+  visibility: hidden;
+  transform: scale(0%);
+  display: block;
+  height: 0;
+}
+
+
+
+
+
+
+@media (min-width: 300px) {
+  #searchDiv {
+    margin: 15px auto;
+    width: 322.1px;
+  }
+}
+
+@media (min-width: 576px) {
+  #searchDiv {
+    margin: 15px auto;
+    width: 533.1px;
+  }
+}
+
+@media (min-width: 768px) {
+  #searchDiv {
+    margin: 15px auto;
+    width: 733.1px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #searchDiv {
+    margin: 45px auto;
+    width: 981.1px;
+  }
+}
+
+@media (min-width: 1300px) {
+  #searchDiv {
+    margin: 45px auto;
+    width: 1409.1px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #searchDiv {
+    margin: 45px auto;
+    width: 1206.1px;
+  }
+}
+
+
+/* Movie Slider */
+.headingMovies {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(33, 37, 41);
+  margin-top: 30px;
+  margin-bottom: 1rem;
+  padding: 10px 14px;
+  border: 1px solid hsl(200 100% 99% / 5%);
+  border-radius: 10px;
+  transition:all 0.3s;
+  
+}
+
+.headingMovies-title {
+  font-family: 'ADLaM Display', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition:all 0.3s;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.movie-box{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  
+}
+
+.movie-box:hover .movie-box-img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.movie-box-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.movie-box .box-text{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px;
+  background: linear-gradient(8deg,hsl(240 17% 14% / 74%) 14%,hsl(240 17% 14% / 14%) 44% );
+  overflow: hidden;
+}
+
+.movie-title{
+  font-family: 'ADLaM Display', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: left;
+  
+}
+
+
+
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: rgb(33, 37, 41);
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgb(31, 5, 59), rgba(37, 117, 252, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(33, 37, 41), rgb(9, 30, 65))
+  }
+
+
+
